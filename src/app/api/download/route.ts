@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { consola } from 'consola'
 import { publicIp } from 'public-ip'
-
 import { RateLimiterRedis, RateLimiterRes } from 'rate-limiter-flexible'
+
 import { getRateLimitHeaders, redis } from '@/app/lib/redis/client'
 
 const downloadLimiter = new RateLimiterRedis({
